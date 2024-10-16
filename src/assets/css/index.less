@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// ----------修改elementui表格的默认样式-----------
+// 滚动条宽度
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background-color: transparent;
+}
+.el-table__body-wrapper {
+  &::-webkit-scrollbar-track {
+    // 轨道颜色
+    background-color: rgb(24, 110, 163);
+  }
+  &::-webkit-scrollbar-thumb {
+    // 滚动块颜色
+    background-color: rgb(33, 166, 33);
+    // border-radius: 5px;
+  }
+  // &::-webkit-scrollbar-thumb:hover {
+  //   // hover高亮
+  //   background-color: #d5d8db;
+  // }
+}
+// 解决表格固定列问题
+// .el-table__fixed,
+// .el-table__fixed-right {
+//   height: calc(100% - 7px) !important;
+//   box-shadow: -5px -2px 10px rgba(0, 0, 0, 0.12) !important;
+//   .el-table__fixed-body-wrapper {
+//     height: calc(100% - 36px) !important;
+//   }
+// }
+// 当表格没有滚动条时
+.el-table__body-wrapper.is-scrolling-none ~ .el-table__fixed-right {
+  height: 100% !important;
+  bottom: 0 !important;
+  box-shadow: none !important;
+}
+// 当表格有纵向滚动条时
+.el-table--scrollable-y .el-table__fixed-right {
+  right: 7px !important;
+}
+// 当表格只有横向滚动条，没有纵向滚动条时
+.el-table--scrollable-x:not(.el-table--scrollable-y) .el-table__fixed-right {
+  right: 0 !important;
+}
+
+// 设置对话框的样式
+.el-dialog {
+  background: #071332;
+  .el-dialog__title {
+    color: #77e1f5;
+  }
+}
+// 修改element表格中单元行在鼠标悬浮时的颜色
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #6495ed !important;
+}
+
+
+
+.el-table__column-filter-trigger i {
+  color: white !important;
+}

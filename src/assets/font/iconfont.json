@@ -1,0 +1,65 @@
+{
+  "id": "2569343",
+  "name": "data-monitor",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7678915",
+      "name": "下箭头-3",
+      "font_class": "xiajiantou-",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "14835597",
+      "name": "左箭头",
+      "font_class": "arrowLeft-fill",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "14835595",
+      "name": "右箭头",
+      "font_class": "arrowRight",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "1905056",
+      "name": "链条",
+      "font_class": "groupsets_",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "12875299",
+      "name": "预警",
+      "font_class": "yujing",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "14154377",
+      "name": "区块",
+      "font_class": "qukuai",
+      "unicode": "e74a",
+      "unicode_decimal": 59210
+    },
+    {
+      "icon_id": "15112740",
+      "name": "交易记录",
+      "font_class": "jiaoyijilu",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "19728801",
+      "name": "用户",
+      "font_class": "subscriber-fill",
+      "unicode": "ebf7",
+      "unicode_decimal": 60407
+    }
+  ]
+}
