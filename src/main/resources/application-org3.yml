@@ -1,0 +1,64 @@
+server:
+  port: 8092
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/data_13?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: foobared
+    database: 13
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: 100
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+department:
+  name: 医院
+  fabric-id: Department3
+
+fabric:
+  mspId: Org3MSP
+  certificatePath: D:/Desktop/lts/dataAsset/organizations/organizations/peerOrganizations/org3.example.com/users/User1@org3.example.com/msp/signcerts/cert.pem
+  privateKeyPath: D:/Desktop/lts/dataAsset/organizations/organizations/peerOrganizations/org3.example.com/users/User1@org3.example.com/msp/keystore/77b57d2a6476904eca0a7ebf1c08a194373f1fb770ba1013b385181431325815_sk
+  tlsCertPath: D:/Desktop/lts/dataAsset/organizations/organizations/peerOrganizations/org3.example.com/peers/peer0.org3.example.com/tls/ca.crt
+  channel: mychannel
+  contract: DataAsset
+  ip: 222.20.126.154:11051
+  name: peer0.org3.example.com
+  sync: false
+
+ipfs:
+  ip: 222.20.126.154
+  port: 5002
+  tmp-file-base-path: D:/Desktop/lts/dataAsset/ipfs/org3
+
+cpabe:
+  public-key-path: D:/Desktop/lts/dataAsset/cpabeKey/org3/public
+  private-key-path: D:/Desktop/lts/dataAsset/cpabeKey/org3/private
+  input-file-path: D:/Desktop/lts/dataAsset/cpabeKey/org3/inputFile
+  enc-file-path: D:/Desktop/lts/dataAsset/cpabeKey/org3/encFile
+  dec-file-path: D:/Desktop/lts/dataAsset/cpabeKey/org3/decFile
+
+http:
+  ip: 127.0.0.1
+  port: 8090
+

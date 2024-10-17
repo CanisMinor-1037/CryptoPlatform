@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.platform.data.mapper.OrderHistoryMapper">
+    <select id="selectCountGroupByName" resultType="com.platform.data.entity.dto.NameAndValue">
+        select name,count(1) as value from t_data_asset_orderer_history group by name;
+    </select>
+    <select id="selectRealTimeInfo" resultType="com.platform.data.entity.dto.RealTime">
+        select fabricId,applicant,owner,name,
+        case status
+            when 2 then '已中止'
+            when 4 then '已完成'
+            when 5 then '成功'
+            when 6 then '失败'
+            else '进行中'
+            end as status,
+        time from t_data_asset_orderer_history;
+    </select>
+    <select id="selectTopFiveApply" resultType="java.lang.String">
+        select applicant from t_data_asset_orderer_history group by applicant order by count(1) desc limit 5;
+    </select>
+    <select id="selectTopFiveApplyCount" resultType="java.lang.Long">
+        select count(1) from t_data_asset_orderer_history group by applicant order by count(1) desc limit 5;
+    </select>
+    <select id="selectTopFiveApplied" resultType="java.lang.String">
+        select owner from t_data_asset_orderer_history group by owner order by count(1) desc limit 5;
+    </select>
+    <select id="selectTopFiveAppliedCount" resultType="java.lang.Long">
+        select count(1) from t_data_asset_orderer_history group by owner order by count(1) desc limit 5;
+    </select>
+    <select id="selectNameAndCountGroupByFabricId" resultType="com.platform.data.entity.dto.NameAndValue">
+        select name,count(1) as value,fabricId from t_data_asset_orderer_history group by name,fabricId;
+    </select>
+</mapper>

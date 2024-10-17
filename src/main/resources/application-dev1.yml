@@ -1,0 +1,70 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/data0?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: foobared
+    database: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: 100
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+department:
+  name: 属性授权中心
+  fabric-id: Department1
+
+fabric:
+  mspId: Org0MSP
+  certificatePath: D:/Desktop/config/crypto-config/peerOrganizations/org0.example.com/users/User1@org0.example.com/msp/signcerts/User1@org0.example.com-cert.pem
+  privateKeyPath: D:/Desktop/config/crypto-config/peerOrganizations/org0.example.com/users/User1@org0.example.com/msp/keystore/priv_sk
+  tlsCertPath: D:/Desktop/config/crypto-config/peerOrganizations/org0.example.com/peers/peer0.org0.example.com/tls/ca.crt
+  channel: mychannel
+  contract: DataAsset
+  ip: 222.20.126.151:7051
+  name: peer0.org0.example.com
+  sync: true
+
+ipfs:
+  ip: 222.20.126.151
+  port: 5001
+  tmp-file-base-path: D:/Desktop/config/data_platform/ipfs/org0
+
+cpabe:
+  public-key-path: D:/Desktop/config/data_platform/cpabeKey/org0/public
+  private-key-path: D:/Desktop/config/data_platform/cpabeKey/org0/private
+  input-file-path: D:/Desktop/config/data_platform/cpabeKey/org0/inputFile
+  enc-file-path: D:/Desktop/config/data_platform/cpabeKey/org0/encFile
+  dec-file-path: D:/Desktop/config/data_platform/cpabeKey/org0/decFile
+
+ca:
+  public-key-path: D:/Desktop/config/data_platform/cpabeKey/caServer/public
+  master-key-path: D:/Desktop/config/data_platform/cpabeKey/caServer/master
+  private-key-path: D:/Desktop/config/data_platform/cpabeKey/caServer/private
+
+http:
+  ip: 127.0.0.1
+  port: 8090
+
+

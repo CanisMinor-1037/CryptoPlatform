@@ -1,0 +1,70 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/data_11?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: foobared
+    database: 11
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: 100
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+department:
+  name: 属性授权中心
+  fabric-id: Department1
+
+fabric:
+  mspId: Org1MSP
+  certificatePath: D:/Desktop/lts/dataAsset/organizations/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/cert.pem
+  privateKeyPath: D:/Desktop/lts/dataAsset/organizations/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/d994d39bc34ad8bf8449421ff582a7202a11ab35316f720d82f183a7a8751f01_sk
+  tlsCertPath: D:/Desktop/lts/dataAsset/organizations/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+  channel: mychannel
+  contract: DataAsset
+  ip: 222.20.126.154:7051
+  name: peer0.org1.example.com
+  sync: false
+
+ipfs:
+  ip: 222.20.126.154
+  port: 5000
+  tmp-file-base-path: D:/Desktop/lts/dataAsset/ipfs/org1
+
+cpabe:
+  public-key-path: D:/Desktop/lts/dataAsset/cpabeKey/org1/public
+  private-key-path: D:/Desktop/lts/dataAsset/cpabeKey/org1/private
+  input-file-path: D:/Desktop/lts/dataAsset/cpabeKey/org1/inputFile
+  enc-file-path: D:/Desktop/lts/dataAsset/cpabeKey/org1/encFile
+  dec-file-path: D:/Desktop/lts/dataAsset/cpabeKey/org1/decFile
+
+ca:
+  public-key-path: D:/Desktop/lts/dataAsset/cpabeKey/caServer/public
+  master-key-path: D:/Desktop/lts/dataAsset/cpabeKey/caServer/master
+  private-key-path: D:/Desktop/lts/dataAsset/cpabeKey/caServer/private
+
+http:
+  ip: 127.0.0.1
+  port: 8090
+
+
