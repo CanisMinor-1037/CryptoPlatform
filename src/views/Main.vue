@@ -16,8 +16,8 @@
       >
         
         <!--<el-menu-item index="/database">数据库</el-menu-item>-->
-        <!--<el-menu-item index="/attribute">属性授权</el-menu-item>-->
-        <el-menu-item index="/history">共享历史</el-menu-item>
+        <el-menu-item index="/attribute">属性授权</el-menu-item>
+        <!--<el-menu-item index="/history">共享历史</el-menu-item>-->
         <el-menu-item index="/order3">摄像头订单</el-menu-item>
         <el-menu-item index="/order2">数据库订单</el-menu-item>
         <el-menu-item index="/order">普通文件订单</el-menu-item>

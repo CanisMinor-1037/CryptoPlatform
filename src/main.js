@@ -132,7 +132,7 @@ import axios from "axios";
 
 Vue.use(dataV);
 Vue.prototype.$echarts = echarts;
-axios.defaults.baseURL="http://222.20.126.151:9012";
+axios.defaults.baseURL="http://127.0.0.1:8090";
 Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
 

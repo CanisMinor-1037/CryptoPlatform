@@ -6,7 +6,12 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    redirect: "confirmation",
+    redirect: "login",
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("@/views/login"),
   },
   {
     path: "",
@@ -49,9 +54,9 @@ const routes = [
         component: () => import("@/views/order3"),
       },
       {
-        path: "/history",
-        name: "history",
-        component: () => import("@/views/history"),
+        path: "/attribute",
+        name: "attribute",
+        component: () => import("@/views/attribute"),
       },
        {
         path: "/camera",
