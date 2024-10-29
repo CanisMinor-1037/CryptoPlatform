@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User registService(User user) {
+    public User registerService(User user) {
         //当新用户的用户名已存在时
         if(userMapper.findByUname(user.getUname())!=null){
             // 无法注册

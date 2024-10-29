@@ -17,7 +17,7 @@ public class LoginController {
     private UserService userService;
 
     @PostMapping("/login")
-    public Result<User> loginController(@RequestParam String uname, @RequestParam String password){
+    public Result<User> loginController(String uname, String password){
         User user = userService.loginService(uname, password);
         if(user!=null){
                 return Result.success(user);
@@ -28,7 +28,7 @@ public class LoginController {
 
     @PostMapping("/register")
     public Result<User> registerController(@RequestBody User newUser){
-        User user = userService.registService(newUser);
+        User user = userService.registerService(newUser);
         if(user!=null){
             return Result.success(user);
         }else{
